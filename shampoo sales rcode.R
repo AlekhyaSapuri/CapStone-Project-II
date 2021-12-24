@@ -88,7 +88,7 @@ class(stst)
 
 MAPE(stst,pred1) #0.1296529
 
-# forecasts of sales count of shampoo for the next 12 months
+# forecast of sales count of shampoo for the next 12 months
 fit <-arima(sps, order = c(1, 2, 2))
 nextpred <-predict(fit,n.ahead = 12)
 nextpred
