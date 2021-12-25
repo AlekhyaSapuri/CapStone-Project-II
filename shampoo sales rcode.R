@@ -7,8 +7,8 @@ class(sp) #data.frame
 sps<- ts(sp[,2],start=2000, frequency=12)
 sps 
 class(sps) #time series
-plot(sps, xlab= "Year", ylab= "Sales", main = "Sales vs Year (Original Dataset)")
-plot(decompose(sps))
+plot(sps, xlab= "Year", ylab= "Sales", main = "Sales vs Year (Original Dataset)") #Little seasonality 
+plot(decompose(sps)) #can find seasonality
 
 #mean (changing mean)
 abline(reg = lm(sps~time(sps)))
@@ -16,7 +16,7 @@ abline(reg = lm(sps~time(sps)))
 # general Trend (upward Trend)
 plot(aggregate(sps,FUN = mean), xlab= "Year", ylab= "Sales", main = "Sales vs Year (Original Dataset)" )
 
-#sesonality (no seasonality)
+#sesonality 
 boxplot(sps~cycle(sps),  xlab= "Year", ylab= "Sales", main = "Sales vs Year (Original Dataset)")
 
 #differencing using log
