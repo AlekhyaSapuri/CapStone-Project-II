@@ -7,7 +7,7 @@ class(sp) #data.frame
 sps<- ts(sp[,2],start=2000, frequency=12)
 sps 
 class(sps) #time series
-plot(sps, xlab= "Year", ylab= "Sales", main = "Sales vs Year (Original Dataset)") #Little seasonality 
+plot(sps, xlab= "Year", ylab= "Sales", main = "Sales vs Year (Original Dataset)")  
 plot(decompose(sps)) #can find seasonality
 
 #mean (changing mean)
